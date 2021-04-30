@@ -1,11 +1,15 @@
 package interviewPreparation.sorting
 
+import org.scalatest.{BeforeAndAfterEach, ParallelTestExecution}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
+
 import java.io.{ByteArrayOutputStream, PrintStream}
 
-import org.scalatest.{BeforeAndAfterEach, FunSuite, Matchers}
-
-class BubbleSortTest extends FunSuite with Matchers with BeforeAndAfterEach {
-
+class BubbleSortJavaTest
+  extends AnyFunSuite
+    with Matchers
+    with BeforeAndAfterEach {
   val outContent = new ByteArrayOutputStream()
   val originalOut: PrintStream = System.out
 
@@ -28,19 +32,19 @@ class BubbleSortTest extends FunSuite with Matchers with BeforeAndAfterEach {
         |Last Element: $lastElement""".stripMargin
 
   test("Testcase 0") {
-    BubbleSort.countSwaps(Array(1, 2, 3))
+    BubbleSortJava.countSwaps(Array(1, 2, 3))
 
     outContent.toString.trim shouldBe generateOutputString(0, 1, 3)
   }
 
   test("Testcase 1") {
-    BubbleSort.countSwaps(Array(3, 2, 1))
+    BubbleSortJava.countSwaps(Array(3, 2, 1))
 
     outContent.toString.trim shouldBe generateOutputString(3, 1, 3)
   }
 
   test("Testcase 2") {
-    BubbleSort.countSwaps(Array(4, 2, 3, 1))
+    BubbleSortJava.countSwaps(Array(4, 2, 3, 1))
 
     outContent.toString.trim shouldBe generateOutputString(5, 1, 4)
   }

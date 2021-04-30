@@ -1,8 +1,11 @@
 package introduction
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class FilterPositionInAListTest extends FunSuite with Matchers {
+class FilterPositionInAListTest
+  extends AnyFunSuite
+    with Matchers {
   test("Testcase 0") {
     val input = List(8, 15, 22, 1, 10, 6, 2, 18, 18, 1)
     val expectedOutput = List(15, 1, 6, 18, 1)

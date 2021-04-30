@@ -1,8 +1,11 @@
 package introduction
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class FilterArrayTest extends FunSuite with Matchers {
+class FilterArrayTest
+  extends AnyFunSuite
+    with Matchers {
   test("Testcase 0") {
     val input = List(-41, 46, -28, 21, 52, 83, -29, 84, 27, 40)
     val delimiter = 25

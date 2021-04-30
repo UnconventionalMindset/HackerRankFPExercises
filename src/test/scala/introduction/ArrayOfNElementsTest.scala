@@ -1,8 +1,11 @@
 package introduction
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class ArrayOfNElementsTest extends FunSuite with Matchers {
+class ArrayOfNElementsTest
+  extends AnyFunSuite
+    with Matchers {
   test("Testcase 0") {
     val size = 10
     ArrayOfNElements.f(size).size shouldBe size

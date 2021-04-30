@@ -1,6 +1,6 @@
 package interviewPreparation.sorting;
 
-public class BubbleSort {
+public class BubbleSortJava {
     static void countSwaps(int[] a) {
         int n = a.length;
         int numSwaps = 0;
