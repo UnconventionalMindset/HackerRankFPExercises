@@ -13,3 +13,6 @@ out/
 # Maven
 target/
 .classpath
+
+# SBT
+.bsp
